@@ -4,7 +4,7 @@ public class subwoofer
 {
 	public static void main(String[]args)
 	{
-		subwoofer volume = new subwoofer();
+		subwofer volume = new subwoofer();
 		
 		Scanner kb = new Scanner(System.in);
 		
