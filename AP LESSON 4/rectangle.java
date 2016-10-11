@@ -25,6 +25,6 @@ public class rectangle
 
 	public static void print()
 	{
-		System.out.printf("Your rectangle area is %.5f sq ft.", calcPerim());
+		System.out.printf("Your rectangle perimeter is %.5f sq ft.", calcPerim());
 	}
 }
