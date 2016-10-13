@@ -28,7 +28,7 @@ public class Lesson_5_E2
 		double total = subtotal - Discount + tax;
 		
 		
-		System.out.println("            <<<<<<<<<<<<Receipt>>>>>>>>>>>>            ");
+		System.out.println("<<<<<<<<<<<<<<<<<<<<Receipt>>>>>>>>>>>>>>>>>>>>");
 		format(item1, price1);
 		format(item2, price2);
 		format(item3, price3);
