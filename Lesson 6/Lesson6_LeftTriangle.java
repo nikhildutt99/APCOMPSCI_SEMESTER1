@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Lesson6_Ex3
+public class Lesson6_LeftTriangle
 {
 	public static void main(String[]args)
 	{
@@ -8,7 +8,7 @@ public class Lesson6_Ex3
 		String word = kb.next();
 		for (int i = 0; i <= word.length(); i++)
 		{
-			System.out.println(word.substring(i,wordlength()));
+			System.out.println(word.substring(i,word.length()));
 		}
 	}
 }
