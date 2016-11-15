@@ -15,6 +15,6 @@ public class Lesson7_Ex1
 			sum = sum + (num % 10);
 			num = num / 10;
 		}
-		System.out.println("The sum of your digits is " + sum);
+		System.out.println("The sum of the digits in " + num + " is " + sum);
 	}
 }
