@@ -6,9 +6,9 @@ public class Lesson6_Ex3
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Enter a word: ");
 		String word = kb.next();
-		for (int i = 0; i <= word.length(); i++)
+		for (int i = 0; i < word.length(); i++)
 		{
-			System.out.println(word.substring(i,wordlength()));
+			System.out.println(word.substring(0,i));
 		}
 	}
 }
