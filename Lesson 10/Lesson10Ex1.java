@@ -28,7 +28,6 @@ public class Lesson10Ex1
 			}
 			
 		}
-        return 
+        return 0;
 	}
 }
-	
