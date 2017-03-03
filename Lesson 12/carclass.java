@@ -19,7 +19,7 @@ public class carclass
 	{
 		return paint;
 	}
-	public String getInterior()
+	public String getInterior()   
 	{
 		return interior;
 	}
