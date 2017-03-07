@@ -1,93 +1,98 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+
 public class toystore
 {
-	ArrayList<toy> t = new ArrayList<toy>();
+	private ArrayList<toy> toyList = new ArrayList<>();
 	
 	public toystore()
 	{
-		t.add(new AFigure(""));
-		t.add(new car(""));
+		toyList = null;
 	}
-	
-	public toystore(String list)
+	public toystore(String ts)
 	{
-		loadT(list);
+		loadToys(ts);
 	}
-	
-	public void loadT(String list)
+	public void loadToys(String ts)
 	{
-		String[] s = list.split(", ");
-		
-		for(int i=0;i<s.length;i+=2)
+		ArrayList<String> toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
+		for(int i = 0; i < toys.size(); i+=2)
 		{
-			String name = s[i];
-			String type = s[i+1];
-			
-			if(getToy(name)==null)
+			String name = toys.get(i);
+			String type = toys.get(i+1);
+			toy t = getThatToy(name);
+			if (t == null)
 			{
-				if(type.equals("Car"))
-					t.add(new car(name));
-				if(type.equals("AF"))
-					t.add(new AFigure(name));
+				if (type.equals("Car"))
+				{
+					toyList.add(new car(name));
+				}
+				else if (type.equals("AF"))
+				{
+					toyList.add(new AFigure(name));
+				}
 			}
 			else
-				getToy(name).setC(1);
+			{
+				t.setCount(t.getCount()+1);
+			}
 		}
 	}
-	
-	public toy getToy(String n)
+	public toy getThatToy(String nm)
 	{
-		for(toy b: t)
+		for(toy i : toyList)
 		{
-			if(b.getN().equals(n))
-				return b;
+			if(i.getName().equals(nm))
+			{
+				return i;
+			}
 		}
 		return null;
 	}
-	public String getFToy()
+	public String getMostFrequentToy()
 	{
-		String name="";
-		int max=0;
-		for(toy b: t)
+		String name = "";
+		int max = Integer.MIN_VALUE;
+		for(toy i : toyList)
 		{
-			if(max<b.getC())
+			if(max < i.getCount())
 			{
-				max=b.getC();
-				name=b.getN();
-			}	
+				max = i.getCount();
+				name = i.getName();
+			}
 		}
 		return name;
 	}
-	
-	public String getFType()
+	public String getMostFrequentType()
 	{
-		int cars=0;
-		int f=0;
-		
-		for(toy b: t)
+		int cars = 0;
+		int figs = 0;
+		for(toy i : toyList)
 		{
-			if(b.getT().equals("AF"))
-				f+=1;
-			if(b.getT().equals("Car"))
-				cars+=1;
+			if(i.getType().equals("Car"))
+			{
+				cars =+ 1;
+			}
+			if(i.getType().equals("AF"))
+			{
+				figs =+ 1;
+			}
 		}
-		if(cars>f)
-			return "cars";
-		if(f>cars)
-			return "f";
+		if(cars > figs)
+		{
+			return "Cars";
+		}
+		if(figs > cars)
+		{
+			return "Action figures";
+		}
 		else
-			return "cars";
+		{
+			return "Equal numbers of both";
+		}
 	}
-	
 	public String toString()
 	{
-		String s="";
-		for(toy b: t)
-		{
-			s+=b.getN()+" ";
-			s+=b.getC()+" ";
-		}		
-		return s;		
+		return ""+toyList;
 	}
-	
 }
