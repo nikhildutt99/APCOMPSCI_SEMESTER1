@@ -1,22 +1,15 @@
 public class car extends toy
 {
-	public car()
-	{
+	private String name;
+	private int count;
+	
+	public car(){
 		super();
 	}
-	
-	public car(String n)
-	{
+	public car(String n){
 		super(n);
 	}
-	
-	public String getType()
-	{
+	public String getType(){
 		return "Car";
-	}
-	
-	public String toString()
-	{
-		return super.toString();
 	}
 }
