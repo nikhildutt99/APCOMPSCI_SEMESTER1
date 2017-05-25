@@ -99,14 +99,14 @@ public class board{
 		position = new String[4];
 		position0 = new String[4];
 		
-		if(queencount==2 && rookcount==2){
+		if(queencount==1 && bishopcount==1 && rookcount==2){
 			int i, j, k, m;
 			for(i=0; i<4; i++){
 				if(list.get(i).getType().equals("queen"))
 					break;
 			}
 			for(j=i+1; j<4; j++){
-				if(list.get(j).getType().equals("queen"))
+				if(list.get(j).getType().equals("bishop"))
 					break;
 			}
 			for(k=0; k<4; k++){
@@ -119,7 +119,7 @@ public class board{
 			}
 			
 			position[0] = "queen 1 is at " + list.get(i).placePiece(4,4);
-			position[1] = "queen 2 is at " + list.get(j).placePiece(6,2);
+			position[1] = "bishop 1 is at " + list.get(j).placePiece(6,2);
 			position[2] = "rook 1 is at " + list.get(k).placePiece(8,1);
 			position[3] = "rook 2 is at " + list.get(m).placePiece(7,6);
 			
