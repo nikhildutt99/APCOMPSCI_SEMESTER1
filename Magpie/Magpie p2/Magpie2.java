@@ -61,7 +61,7 @@ public class Magpie2
 		}
 		
 		else if(findKeyword(statement, "robinette") >= 0){
-			response = "He sounds like a pretty dank teacher.";
+			response = "Robinette HAHA";
 		}
 
 		// Responses which require transformations
