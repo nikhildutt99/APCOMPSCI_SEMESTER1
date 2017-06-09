@@ -39,11 +39,11 @@ public class knight implements pieces{
 	}
 	
 	public String placePiece(int xx, int yy){
-		if(xx<=7 && yy<=7 && xx>=0 && yy>=0){
+		if(xx<=8 && yy<=8 && xx>0 && yy>0){
 			x=xx;
 			y=yy;
 		}
 		
-		return ""+x+y;
+		return "("+x+","+y+")";
 	}
 }

@@ -1,10 +1,11 @@
-public class rook implements pieces{
+public class pawn implements pieces{
 	
-	int x,y;
+	int x;
+	int y;
 	
 	public void movePiece(int xx, int yy){
 		if(!(x+xx>7||x+xx<0||y+yy>7||y+yy<0)){
-			if(xx==0 || yy==0){
+			if(xx==0||yy==0){
 				x+=xx;
 				y+=yy;
 			}
@@ -12,15 +13,14 @@ public class rook implements pieces{
 	}
 	
 	public String getType(){
-		return "rook";
+		return "pawn";
 	}
 	
 	public String placePiece(int xx, int yy){
-		if(xx<=7 && yy<=7 && xx>=0 && yy>=0){
+		if(xx<=8 && yy<=8 && xx>0 && yy>0){
 			x=xx;
 			y=yy;
 		}
-		
-		return ""+x+y;
+		return "("+x+","+y+")";
 	}
 }
