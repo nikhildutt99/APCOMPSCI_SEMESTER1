@@ -566,22 +566,32 @@ public class board{
 		
 		else if(pawncount==4){
 			int i, j, k, m, t;
+			//we had an error here because i misspelled the word pawn in one line, so theres a little extra code that's unnecessary that was used to debug
+			//i commented out all of that useless code, but i left it in for fun
+			
+			/*for (int cc=0; cc<4; cc++) {
+				System.out.println("List[" + cc + "]:" + list.get(cc).getType());
+			}*/
 			for(i=0; i<4; i++){
 				if(list.get(i).getType().equals("pawn"))
 					break;
 			}
+			//System.out.println("value of i: "+i);
 			for(j=i+1; j<4; j++){
 				if(list.get(j).getType().equals("pawn"))
 					break;
 			}
+			//System.out.println("value of j: "+j);
 			for(k=j+1; k<4; k++){
-				if(list.get(k).getType().equals("pwan"))
+				if(list.get(k).getType().equals("pawn"))
 					break;
 			}
+			//System.out.println("value of k"+k);
 			for(m=k+1; m<4; m++){
 				if(list.get(m).getType().equals("pawn"))
 					break;
 			}
+			//System.out.println("value of m"+m);
 			for(t=0; t<4; t++){
 				if(list.get(t).getType().equals("king"))
 					break;

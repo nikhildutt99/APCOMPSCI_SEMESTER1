@@ -20,7 +20,9 @@ public class pawn implements pieces{
 		if(xx<=8 && yy<=8 && xx>0 && yy>0){
 			x=xx;
 			y=yy;
+			return "("+x+","+y+")";
 		}
-		return "("+x+","+y+")";
+		else
+			return "";
 	}
 }
