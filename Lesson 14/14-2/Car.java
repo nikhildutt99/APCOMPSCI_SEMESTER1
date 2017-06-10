@@ -1,19 +1,25 @@
-public class Car implements Location
+public class car implements location
 {
-	public final int ID;
-	public double[] location = new double[2];
+	double[] l;
+	public final int id=(int)(Math.random() * (1000000-100000)+1) + 100000;
 	
-	public Car(){
-		ID = (int)(Math.random()*1000000) + 1;
+	public car()
+	{
+		l = new double[2];
+		l[0]=0;
+		l[1]=0;
 	}
-	public int getID(){
-		return ID;
+	public int getID()
+	{
+		return id;
 	}
-	public double[] getLoc(){
-		return location;
+	public void move(double xx,double yy)
+	{
+		l[0]+=xx;
+		l[1]+=yy;
 	}
-	public void move(double x, double y){
-		location[0] += x;
-		location[1] += y;
+	public double[] getLoc()
+	{
+		return l;
 	}
 }

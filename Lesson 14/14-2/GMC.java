@@ -1,7 +1,8 @@
-public class GMC extends Car
+public class gmc extends car
 {
-	public GMC(double x, double y){
-		location[0] = x;
-		location[1] = y;
+	gmc(double x, double y)
+	{
+		l[0]=x;
+		l[1]=y;
 	}
 }
